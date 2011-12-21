@@ -71,6 +71,11 @@ public class XsdHelper {
     }
 
     public static List<String> getTypes(Document document) {
+        
+        if (document == null){
+            throw new NullPointerException("Document is null");
+        }
+        
         return new ArrayList(_getTypes(document).keySet());
     }
 
@@ -114,10 +119,20 @@ public class XsdHelper {
     }
 
     public static List<String> getUnusedTypes(Document document) {
+        
+        if (document == null){
+            throw new NullPointerException("Document is null");
+        }
+        
         return new ArrayList(_getUnusedTypes(document).keySet());        
     }
 
     public static void removeUnusedTypes(Document document) {
+        
+        if (document == null){
+            throw new NullPointerException("Document is null");
+        }
+        
         HashMap<String, Node> unusedTypes = null;
         do {
             unusedTypes = _getUnusedTypes(document);
