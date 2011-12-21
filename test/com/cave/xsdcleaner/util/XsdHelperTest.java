@@ -15,7 +15,7 @@ import org.w3c.dom.Document;
 
 /**
  *
- * @author hbaptista
+ * @author José Rodrigues
  */
 public class XsdHelperTest {
     
