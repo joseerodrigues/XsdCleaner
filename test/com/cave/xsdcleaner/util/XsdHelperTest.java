@@ -17,7 +17,7 @@ import org.w3c.dom.Document;
  * @author José Rodrigues
  */
 public class XsdHelperTest {
-    
+
     public XsdHelperTest() {
     }
 
@@ -28,11 +28,11 @@ public class XsdHelperTest {
     @AfterClass
     public static void tearDownClass() throws Exception {
     }
-    
+
     @Before
     public void setUp() {
     }
-    
+
     @After
     public void tearDown() {
     }
@@ -40,32 +40,30 @@ public class XsdHelperTest {
     /**
      * Test of getTypes method, of class XsdHelper.
      */
-    @Test(expected=NullPointerException.class)
+    @Test(expected = NullPointerException.class)
     public void testGetTypes() {
         System.out.println("getTypes");
-        Document document = null;
-        List expResult = null;
-        List result = XsdHelper.getTypes(document);        
+
+        XsdHelper.getTypes(null);
     }
 
     /**
      * Test of getUnusedTypes method, of class XsdHelper.
      */
-    @Test(expected=NullPointerException.class)
+    @Test(expected = NullPointerException.class)
     public void testGetUnusedTypes() {
         System.out.println("getUnusedTypes");
-        Document document = null;
-        List expResult = null;
-        List result = XsdHelper.getUnusedTypes(document);
+
+        XsdHelper.getUnusedTypes(null);
     }
 
     /**
      * Test of removeUnusedTypes method, of class XsdHelper.
      */
-    @Test(expected=NullPointerException.class)
+    @Test(expected = NullPointerException.class)
     public void testRemoveUnusedTypes() {
         System.out.println("removeUnusedTypes");
-        Document document = null;
-        XsdHelper.removeUnusedTypes(document);
+
+        XsdHelper.removeUnusedTypes(null);
     }
 }
